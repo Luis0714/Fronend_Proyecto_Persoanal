@@ -1,0 +1,258 @@
+$white: #FFFFFF;
+$black: #000000;
+$Very-light-pink: #C7C7C7;
+$text-input-field: #F7F7F7;
+$holpital-green: #9ae07d;
+$maron-oscuro: #483849;
+$maron-oscuro2: #644858;
+$maron-oscuro3: #8f6470;
+$maron-claro2: #cb8f90;
+$maron-claro: #ffcbb8;
+$backgroud: #e7efe6;
+$purpu: #d1aed0;
+$sm: 14px;
+$md:16px;
+$lg:0px;
+
+body{
+  font-family: 'Quicksand', sans-serif;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 24px;
+  align-items: center;
+  border-bottom: 1px solid $Very-light-pink;
+  background: #e7efe6;
+}
+
+.menu{
+  display: none;
+}
+.logo{
+  width: 100px;
+}
+.navbar-left{
+  display: flex;
+  margin-left: 12px;
+  align-items: center;
+}
+.navbar-left ul{
+  display: flex;
+  margin-left: 16px;
+}
+.navbar-right{
+  display: flex;
+}
+.navbar-left ul li a,
+.navbar-right ul li a{
+  text-decoration: none;
+  color: $black;
+  border: 1px solid $backgroud;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover{
+  text-decoration: none;
+  color: $purpu;
+  border: 1px solid $purpu;
+}
+.navbar-left ul,
+.navbar-right ul{
+  list-style: none;
+  padding: 0;
+  margin: 0px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+.navbar-email:hover{
+  color: $Very-light-pink;
+  font-size: $sm;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.navbar-email{
+  color: $purpu;
+  font-size: $sm;
+  margin-right: 12px;
+  cursor: pointer;
+}
+.icono{
+  margin-left: 5px;
+  font-weight: bold;
+  color: $black;
+}
+.navbar-image-user img{
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 1px red;
+}
+.navbar-image-user div{
+  width: 8px;
+  height: 8px;
+  background-color: $holpital-green;
+  border-radius: 50%;
+  font-size: $sm;
+  font-weight: bold;
+  position: absolute;
+  top: -6px;
+  right: -3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-email img{
+  width: 24px;
+  height: 24px;
+  object-fit: cover;
+}
+
+.container-menu-mobile{
+ display: inline-block;
+ height: auto;
+ padding: 10px;
+ width: auto;
+ position: absolute;
+ top: 101px;
+ left: 1;
+ border: 1px solid red;
+ border-radius: 10px;
+}
+
+.menu-mobile {
+  padding: 24px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: $maron-claro;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  transform: translateX(-100);
+  transition: all ease-out .5s;
+}
+.menu-mobile.active{
+  display: none;
+  transform: translateX(0);
+}
+
+.icon-menu-modile fa-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.image-user{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.name-user{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 14px;
+}
+.name-user:hover{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 14px;
+  color: $holpital-green;
+  cursor: pointer;
+}
+.rol-user{
+ font-size: 12px;
+ color: $Very-light-pink;
+ text-align: center;
+}
+.info-user{
+ padding: 24px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 12px;
+ width: 100%;
+}
+
+
+.menu-mobile a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.icon-menu-modile{
+  margin: 30px;
+}
+
+.menu-mobile a:hover {
+  text-decoration: none;
+  color: $holpital-green;
+  border-radius: 1px solid $holpital-green;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.menu-mobile ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 24px 0 0;
+}
+
+.menu-mobile ul li{
+  margin-bottom: 24px;
+}
+.email{
+  font-size: $sm;
+  font-weight: 300 !important;
+  color: $Very-light-pink;
+}
+
+.menu-mobile ul:nth-child(2){
+  border-bottom: 1px solid $Very-light-pink;
+}
+.menu-mobile ul:nth-child(3){
+  border-bottom: 1px solid $Very-light-pink;
+}
+.menu-mobile ul:nth-child(1){
+  border-bottom: 1px solid $Very-light-pink;
+}
+.sing-out{
+  font-size: $sm;
+  color: $holpital-green !important;
+}
+.sing-out-icon{
+  color: $black;
+  margin-right: 10px;
+}
+.sing-out:hover{
+  font-size: $sm;
+  color: $Very-light-pink !important;
+}
+.sing-out-icon:hover{
+  color: $Very-light-pink;
+  margin-right: 10px;
+}
+
+@media (max-width: 640px){
+  .menu{
+    display: block;
+  }
+  .navbar-left ul{
+    display: none;
+  }
+  .navbar-email{
+    display: none;
+  }
+}

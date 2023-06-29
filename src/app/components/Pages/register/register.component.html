@@ -1,0 +1,183 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="register">
+
+    <div class="title">
+      <img class="logo" src="../../../../assets/LogoSinFondo.png" alt="logo">
+      <h1>Registrar usuarios</h1>
+    </div>
+
+
+    <div class="form-container">
+
+      <form [formGroup]="form" (ngSubmit)="registerUser($event)" class="form">
+        <div class="colunm">
+          <label for="name">
+            <fa-icon class="icon-menu-modile" [icon]="faUser"></fa-icon>
+            Nombre
+          </label>
+          <input [class.is-valid]="form.get('name')?.touched && form.get('name')?.valid"
+                 [class.is-invalid]="form.get('name')?.touched  && form.get('name')?.invalid"
+                 type="text" id="name" formControlName="name" class="input input-name">
+           <p><strong *ngIf="form.get('name')?.touched  && form.get('name')?.hasError('required')">Este campo es requerido</strong> </p>
+
+          <label for="dateOfBirth">
+            <fa-icon class="icon-menu-modile" [icon]="faCalendar"></fa-icon>
+            Fecha de nacimiento
+          </label>
+          <input
+              [class.is-valid]="form.get('dateOfBirth')?.touched && form.get('dateOfBirth')?.valid"
+              [class.is-invalid]="form.get('dateOfBirth')?.touched  && form.get('dateOfBirth')?.invalid"
+              type="date" id="dateOfBirth" formControlName="dateOfBirth" class="input input-dateOfBirth">
+              <p><strong *ngIf="form.get('dateOfBirth')?.touched  && form.get('dateOfBirth')?.hasError('required')">Este campo es requerido</strong> </p>
+
+          <label for="email">
+            <fa-icon class="icon-menu-modile" [icon]="faEnvelope"></fa-icon>
+            Email
+          </label>
+          <input
+                [class.is-valid]="form.get('email')?.touched && form.get('email')?.valid"
+                [class.is-invalid]="form.get('email')?.touched  && form.get('email')?.invalid"
+                type="email" id="email" formControlName="email" class="input input-email">
+                <p><strong *ngIf="form.get('email')?.touched  && form.get('email')?.hasError('required')">Este campo es requerido</strong> </p>
+
+
+          <label for="roles">
+            <fa-icon class="icon-menu-modile" [icon]="faUserSecret"></fa-icon>
+            Rol
+          </label>
+          <select
+            [class.is-valid]="form.get('rolId')?.touched && form.get('rolId')?.valid"
+            [class.is-invalid]="form.get('rolId')?.touched  && form.get('rolId')?.invalid"
+            formControlName="rolId" name="roles" id="roles">
+            <option value="">Selecciona un valor</option>
+            <option value="1">Super Administrador</option>
+            <option value="2">Cliente</option>
+            <option value="3">Supervisor</option>
+            <!-- Agrega más opciones según los valores que recibas del backend -->
+          </select>
+          <p><strong *ngIf="form.get('rolId')?.touched  && form.get('rolId')?.hasError('required')">Este campo es requerido</strong> </p>
+        </div>
+
+        <div class="colunm">
+          <label for="last-name">
+            <fa-icon class="icon-menu-modile" [icon]="faUser"></fa-icon>
+            Primer apellido
+          </label>
+          <input
+            [class.is-valid]="form.get('lastName')?.touched && form.get('lastName')?.valid"
+            [class.is-invalid]="form.get('lastName')?.touched  && form.get('lastName')?.invalid"
+            type="text" id="last-name" formControlName="lastName"  class="input input-last-name">
+          <p><strong *ngIf="form.get('lastName')?.touched  && form.get('lastName')?.hasError('required')">Este campo es requerido</strong> </p>
+
+          <label for="documentTypeId">
+            <fa-icon class="icon-menu-modile" [icon]="faIdCard"></fa-icon>
+            Tipo de documento
+          </label>
+          <select
+            [class.is-valid]="form.get('documentTypeId')?.touched && form.get('documentTypeId')?.valid"
+            [class.is-invalid]="form.get('documentTypeId')?.touched  && form.get('documentTypeId')?.invalid"
+            formControlName="documentTypeId" name="documentTypeId" id="documentTypeId">
+            <option value="">Selecciona un valor</option>
+            <option value="1">Cedula de ciudadania</option>
+            <option value="2">Pasaporte</option>
+            <option value="3">Cedula extrangera</option>
+            <option value="4">Visa</option>
+            <!-- Agrega más opciones según los valores que recibas del backend -->
+          </select>
+          <p><strong *ngIf="form.get('documentTypeId')?.touched  && form.get('documentTypeId')?.hasError('required')">Este campo es requerido</strong> </p>
+
+          <label for="numberPhone">
+            <fa-icon class="icon-menu-modile" [icon]="faPhone"></fa-icon>
+            Número de telefono
+          </label>
+          <input
+            [class.is-valid]="form.get('numberPhone')?.touched && form.get('numberPhone')?.valid"
+            [class.is-invalid]="form.get('numberPhone')?.touched  && form.get('numberPhone')?.invalid"
+            type="tel" id="numberPhone" formControlName="numberPhone" class="input input-numberphone">
+            <p><strong *ngIf="form.get('numberPhone')?.touched  && form.get('numberPhone')?.hasError('required')">Este campo es requerido</strong> </p>
+
+          <label for="password">
+            <fa-icon class="icon-menu-modile" [icon]="faPhone"></fa-icon>
+            Contraseña
+          </label>
+          <input
+            [class.is-valid]="form.get('password')?.touched && form.get('password')?.valid"
+            [class.is-invalid]="form.get('password')?.touched  && form.get('password')?.invalid"
+            type="tel" id="password" formControlName="password" class="input input-password">
+            <p><strong *ngIf="form.get('password')?.touched  && form.get('password')?.hasError('required')">Este campo es requerido</strong> </p>
+
+        </div>
+
+        <div class="colunm">
+
+          <label for="Secund-last-name">
+            <fa-icon class="icon-menu-modile" [icon]="faUser"></fa-icon>
+            Segundo Apellido
+          </label>
+          <input
+            [class.is-valid]="form.get('secondLastName')?.touched && form.get('secondLastName')?.valid"
+            [class.is-invalid]="form.get('secondLastName')?.touched  && form.get('secondLastName')?.invalid"
+            type="text" id="Secund-last-name" formControlName="secondLastName"  class="input input-secund-last-name">
+            <p><strong *ngIf="form.get('secondLastName')?.touched  && form.get('secondLastName')?.hasError('required')">Este campo es requerido</strong> </p>
+
+          <label for="document">
+            <fa-icon class="icon-menu-modile" [icon]="faIdCard"></fa-icon>
+            Documento
+          </label>
+          <input
+            [class.is-valid]="form.get('document')?.touched && form.get('document')?.valid"
+            [class.is-invalid]="form.get('document')?.touched  && form.get('document')?.invalid"
+            type="text" id="document" formControlName="document" class="input input-secund-last-name">
+            <p><strong *ngIf="form.get('document')?.touched  && form.get('document')?.hasError('required')">Este campo es requerido</strong> </p>
+
+          <label for="address">
+            <fa-icon class="icon-menu-modile" [icon]="faLocationDot"></fa-icon>
+            Dirección
+          </label>
+          <input
+            [class.is-valid]="form.get('address')?.touched && form.get('address')?.valid"
+            [class.is-invalid]="form.get('address')?.touched  && form.get('address')?.invalid"
+            type="text" id="address" formControlName="address" class="input input-secund-address">
+            <p><strong *ngIf="form.get('address')?.touched  && form.get('address')?.hasError('required')">Este campo es requerido</strong> </p>
+
+        </div>
+
+
+        <div class="colunm">
+
+          <label for="image">
+            <fa-icon class="icon-menu-modile" [icon]="faImage"></fa-icon>
+            Imagen
+          </label>
+          <input
+            [class.is-valid]="form.get('image')?.touched && form.get('image')?.valid"
+            [class.is-invalid]="form.get('image')?.touched  && form.get('image')?.invalid"
+            id="image" type="file"
+            (change)="uploadFile($event)"
+            accept="image/*"
+            formControlName="image"
+            >
+            <p><strong *ngIf="form.get('image')?.touched  && form.get('image')?.hasError('required')">Este campo es requerido</strong> </p>
+
+        </div>
+
+        <div class="colunm">
+          <div id="image-upload">
+            <img *ngIf="!imagen" src="../../../../assets/default-user-image.png" alt="">
+            <img  src="{{imagen}}">
+          </div>
+        </div>
+      </form>
+      <div class="button-container">
+        <app-button-aceptar (click)="registerUser($event)">Registrarme</app-button-aceptar>
+      </div>
+
+    </div>
+  </div>
+</body>

@@ -1,0 +1,27 @@
+/* Estilos para el modal */
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* Centrar verticalmente */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 400px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilos para el botón que abre el modal */
+
+
+/* Estilos adicionales */
+body {
+  font-family: Arial, sans-serif;
+}
+

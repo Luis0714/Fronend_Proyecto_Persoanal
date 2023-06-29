@@ -1,0 +1,158 @@
+$white: #FFFFFF;
+$black: #000000;
+$Very-light-pink: #C7C7C7;
+$text-input-field: #F7F7F7;
+$holpital-green: #9ae07d;
+$sm: 14px;
+$md: 16px;
+$lg: 0px;
+
+body {
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+
+.icon-menu-modile fa-icon{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.image-user{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.name-user{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 14px;
+}
+.name-user:hover{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 14px;
+  color: $holpital-green;
+  cursor: pointer;
+}
+.rol-user{
+ font-size: 12px;
+ color: $Very-light-pink;
+ text-align: center;
+}
+.info-user{
+ padding: 24px;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ margin-bottom: 12px;
+ width: 100%;
+}
+
+
+.menu-mobile a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.icon-menu-modile{
+  margin: 30px;
+}
+
+.icon-menu-modile{
+  margin: 30px;
+}
+
+.menu-mobile a:hover {
+  text-decoration: none;
+  color: $holpital-green;
+  border-radius: 1px solid $holpital-green;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
+.menu-mobile ul {
+  padding: 0;
+  list-style: none;
+  margin-top: 24px 0 0;
+}
+
+.menu-mobile ul li{
+  margin-bottom: 24px;
+}
+.email{
+  font-size: $sm;
+  font-weight: 300 !important;
+  color: $Very-light-pink;
+}
+
+.menu-mobile ul:nth-child(2){
+  border-bottom: 1px solid $Very-light-pink;
+}
+.menu-mobile ul:nth-child(3){
+  border-bottom: 1px solid $Very-light-pink;
+}
+.menu-mobile ul:nth-child(1){
+  border-bottom: 1px solid $Very-light-pink;
+}
+.sing-out{
+  font-size: $sm;
+  color: $holpital-green !important;
+}
+.sing-out-icon{
+  color: $black;
+  margin-right: 10px;
+}
+.sing-out:hover{
+  font-size: $sm;
+  color: $Very-light-pink !important;
+}
+.sing-out-icon:hover{
+  color: $Very-light-pink;
+  margin-right: 10px;
+}
+.side-menu {
+  position: fixed;
+  min-height: 100vh;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: translateX(-100%);
+  transition: all ease-out .5s;
+  &.active {
+    transform: translateX(0);
+  }
+}
+
+.menu-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: white;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transform: translateX(-100%);
+  transition: all ease-out .5s;
+  &.active {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,45 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="menu-desktop">
+    <div (click)="toggleMenu()">
+      <fa-icon class="menu" [icon]="faBars"></fa-icon>
+    </div>
+
+    <div class="navbar-left">
+      <app-menu-mobile [handleClose]="toggleMenu" [showMenu]="isMenuOpen"></app-menu-mobile>
+      <img class="logo" src="../../../../assets/LogoSinFondo.png" alt="logo">
+      <ul>
+        <li>
+          <a routerLink="/users">Usuarios</a>
+        </li>
+        <li>
+          <a routerLink="/rols">Roles</a>
+        </li>
+        <li>
+          <a routerLink="/contactenos">Cantactenos</a>
+        </li>
+      </ul>
+    </div>
+    <cdk-accordion>
+      <cdk-accordion-item #accordionMenu="cdkAccordionItem">
+        <div class="navbar-right">
+          <ul>
+            <li (click)="accordionMenu.toggle()" class="navbar-email">
+              luisandres@gmail.com
+              <fa-icon class="icono" [icon]="accordionMenu.expanded ? faAngleUp : faAngleDown"></fa-icon>
+            </li>
+            <li (click)="openModal()" class="navbar-image-user">
+              <img  src="../../../../assets/usuario.jpg" alt="imagen usuario">
+            </li>
+          </ul>
+        </div>
+        <app-menu-desktop [style.display]="accordionMenu.expanded ? '':'none'"></app-menu-desktop>
+      </cdk-accordion-item>
+    </cdk-accordion>
+  </nav>
+</body>

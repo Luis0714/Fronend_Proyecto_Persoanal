@@ -1,0 +1,54 @@
+<!-- <head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body> -->
+
+  <div class="menu-mobile"  [class.active]="showMenu">
+    <div (click)="handleClose && closeMenu()"class="icon-menu-x">
+      <fa-icon [icon]="faXmark" size="lg"></fa-icon>
+    </div>
+    <div class="info-user">
+      <img class="image-user" src="../../../../assets/usuario.jpg" alt="">
+      <h3 class="name-user">Luis Andres Martinez Estremor</h3>
+      <p class="rol-user"> Super administrador</p>
+    </div>
+
+    <ul>
+      <li>
+        <fa-icon class="icon-menu-modile" [icon]="faUsers "></fa-icon>
+        <a href="">Usuarios</a>
+      </li>
+      <li>
+        <fa-icon class="icon-menu-modile" [icon]="faUserSecret "></fa-icon>
+        <a href="">Roles</a>
+      </li>
+      <li>
+        <fa-icon class="icon-menu-modile" [icon]="faPhone "></fa-icon>
+        <a href="">Contactenos</a>
+      </li>
+
+    </ul>
+
+
+    <ul>
+      <li>
+        <fa-icon class="icon-menu-modile" [icon]="faEnvelope" size="sm" color="#9ae07d" ></fa-icon>
+        <a href="" class="email">luisandres@gmail.com</a></li>
+      <li>
+        <fa-icon class="icon-menu-modile" [icon]="faRightFromBracket" size="sm" color="#9ae07d" ></fa-icon>
+        <a href="" class="sing-out">Sing out</a>
+      </li>
+    </ul>
+  </div>
+<!-- </body> -->
+
+<!-- <div class="side-menu" [class.active]="showMenu">
+  <button (click)="handleClose && handleClose()">close</button>
+  <ul>
+    <li><a href="">All</a></li>
+    <li><a href="">Clothes</a></li>
+    <li><a href="">Electronics</a></li>
+  </ul>
+</div> -->

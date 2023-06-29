@@ -1,0 +1,122 @@
+$white: #FFFFFF;
+$black: #000000;
+$Very-light-pink: #C7C7C7;
+$text-input-field: #F7F7F7;
+$holpital-green: #9ae07d;
+$narage: #dfb39a;
+$sm: 14px;
+$md:16px;
+$lg:0px;
+$maron-oscuro: #483849;
+$maron-oscuro2: #644858;
+$maron-oscuro3: #8f6470;
+$maron-claro2: #cb8f90;
+$maron-claro: #ffcbb8;
+$backgroud: #e7efe6;
+$purpu: #d1aed0;
+
+body{
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+}
+.title{
+  width: 100%;
+  margin-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: $purpu;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+.form-container form{
+  width: 100%;
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(3,240px);
+  gap: 26px;
+  place-content: center;
+}
+.button-container {
+  margin: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-container app-button-aceptar{
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-upload img{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  border-radius: 4px;
+  object-fit: cover;
+  border: 1px solid $purpu;
+  width: 100%;
+}
+label{
+  font-size: $md;
+  font-weight: bold;
+  margin: 4px;
+  padding: 4px;
+}
+.colunm{
+  margin: 8px;
+}
+input{
+  width: 100%;
+  color: $black;
+  font-weight: 300px;
+  height: 30px;
+  padding: 12px;
+  margin: 8px;
+  border: 1px solid $purpu;
+  border-radius: 4px;
+}
+select{
+  width: 100%;
+  height: 30px;
+  margin: 8px;
+  border: 1px solid $purpu;
+  border-radius: 4px;
+}
+#image {
+  width: 100%;
+  height: 60px;
+}
+input{
+  &.is-invalid{
+    border: 1px solid red;
+  }
+}
+input{
+  &.is-valid{
+    border: 1px solid $holpital-green;
+  }
+}
+
+strong{
+  margin: 8px;
+  color: red;
+}
+
+@media(max-width:800px){
+  .logo{
+    display: none;
+  }
+  .form-container form{
+    width: 100%;
+    padding: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,240px);
+    gap: 26px;
+    place-content: center;
+  }
+}
